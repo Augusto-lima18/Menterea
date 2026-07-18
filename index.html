@@ -1,140 +1,95 @@
-<meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menterea | Estratégia &amp; Estética</title>
-    <!-- Google Fonts: Montserrat (Modern Sans) and Poltawski Nowy (Elegant Serif) -->
+    <title>Menterea | Estratégia & Estética</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Poltawski+Nowy:ital,wght@0,500;0,600;0,700;1,500&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Poltawski+Nowy:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <style>
-        /* REGRA GLOBAL PARA REMOVER TODOS OS SUBLINHADOS DE LINKS E BOTÕES (INCLUINDO HOVER E OUTROS ESTADOS) */
-        a, 
-        button, 
-        .btn-outline-gold, 
-        .btn-primary-gold, 
-        .btn-secondary-link, 
-        .card-link {
-            text-decoration: none !important;
-            outline: none;
-        }
-        a:hover, 
-        a:focus, 
-        a:active, 
-        a:visited {
-            text-decoration: none !important;
-        }
-    </style>
-
-
-
-    <!-- Header Removido conforme solicitado -->
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <div class="tagline">ESTRATÉGIA &amp; ESTTÉTICA</div>
-                <h1>O peso invisível que separa o <span class="gold-text italic">caos</span> do <span class="gold-text">crescimento</span>.</h1>
-                <p class="hero-desc">
-                    Tráfego pago sem narrativa visual é dinheiro queimado. CRM estruturado sem leads qualificados é uma máquina vazia. Nós unimos a precisão matemática dos anúncios ao design de alto padrão para construir marcas que dominam seus mercados.
-                </p>
-                <div class="hero-actions">
-                    <a href="#solucoes" class="btn-primary-gold">Conhecer Soluções</a>
-                    <a href="#filosofia" class="btn-secondary-link">A Filosofia do Peso →</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="canvas-frame">
-                    <div class="canvas-inner">
-                        <span class="canvas-logo">M</span>
-                        <div class="canvas-lines"></div>
+    <main>
+        <!-- Hero: O ponto de entrada principal -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="tagline">ESTRATÉGIA & ESTÉTICA</span>
+                    <h1>O peso invisível que separa o <span class="gold italic">caos</span> do <span class="gold">crescimento</span>.</h1>
+                    <p>Tráfego pago sem narrativa visual é dinheiro queimado. CRM estruturado sem leads qualificados é uma máquina vazia. Unimos precisão matemática e design para marcas que dominam seus mercados.</p>
+                    <div class="actions">
+                        <a href="#solucoes" class="btn-primary">Conhecer Soluções</a>
+                        <a href="#filosofia" class="btn-secondary">A Filosofia do Peso →</a>
                     </div>
                 </div>
+                <div class="hero-visual">
+                    <div class="canvas"><span>M</span></div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Philosophy Section -->
-    <section id="filosofia" class="philosophy-section">
-        <div class="container philosophy-grid">
-            <div class="philosophy-quote">
-                <blockquote class="serif-text">
+        <!-- Filosofia: A base conceitual -->
+        <section id="filosofia" class="philosophy">
+            <div class="container grid-2">
+                <blockquote class="serif">
                     "A excelência nunca é um acidente. Ela é sempre o resultado de uma intenção elevada, esforço sincero e execução inteligente."
+                    <footer>— Aristóteles</footer>
                 </blockquote>
-                <p class="quote-author">— Aristóteles</p>
-            </div>
-            <div class="philosophy-text">
-                <h2>Por que a maioria das empresas falha na escala?</h2>
-                <p>
-                    A maioria dos negócios tenta resolver problemas isolados. Contratam um designer para "deixar bonito", um gestor de tráfego para "subir campanhas" e tentam configurar um CRM sem entender de funil. 
-                </p>
-                <p>
-                    O Menterea não é um serviço isolado. É uma arquitetura de crescimento integrada de ponta a ponta. Nós colocamos peso na sua comunicação de vendas onde realmente importa.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solutions / Architecture Section -->
-    <section id="solucoes" class="solutions-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="sub-title">O ECOSSISTEMA</span>
-                <h2>Engenharia de Conversão</h2>
-                <p class="section-desc">Estruturas modulares desenhadas para atrair, capturar, qualificar e reter clientes de alto valor.</p>
-            </div>
-
-            <div class="cards-grid">
-                <!-- Card 1 -->
-                <div class="solution-card">
-                    <div class="card-num">01</div>
-                    <h3>Atração &amp; Posicionamento</h3>
-                    <p class="card-sub">Tráfego Pago + Produção Audiovisual</p>
-                    <p class="card-body">
-                        Desenho de criativos e campanhas de anúncios altamente calibradas. Unimos estética refinada (fotos e vídeos de alto impacto) com estratégias agressivas de tráfego pago para atrair atenção qualificada e baratear seus custos de conversão.
-                    </p>
-                    <a href="https://menterea.com.br/trafego" class="card-link">Explorar Solução →</a>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="solution-card">
-                    <div class="card-num">02</div>
-                    <h3>Conversão &amp; Retenção</h3>
-                    <p class="card-sub">CRM &amp; Processos Comerciais</p>
-                    <p class="card-body">
-                        De nada serve gerar leads se você os perde no WhatsApp ou em planilhas confusas. Desenhamos o seu funil de vendas dentro do sistema de CRM, automatizando etapas e preparando seu time comercial para fechar contratos com a máxima eficiência.
-                    </p>
-                    <a href="https://menterea.com.br/crm" class="card-link">Explorar Solução →</a>
-                </div>
-
-                <!-- Card 3 highlight -->
-                <div class="solution-card highlight-card">
-                    <div class="card-num gold-text">03</div>
-                    <h3 class="gold-text">O Ecossistema Aristos</h3>
-                    <p class="card-sub text-light">A Solução Completa de Ponta a Ponta</p>
-                    <p class="card-body">
-                        A sinergia perfeita para negócios maduros. Unimos Atração (Tráfego e Audiovisual) à Conversão (CRM estruturado) em um único ecossistema integrado de crescimento previsível e escalável. Sem ruídos de comunicação.
-                    </p>
-                    <a href="https://wa.me/seu-numero" class="btn-primary-gold" style="display: inline-block; margin-top: 15px; width: 100%; text-align: center;">Falar de Combo Personalizado</a>
+                <div class="philosophy-text">
+                    <h2>Por que a maioria falha?</h2>
+                    <p>A maioria tenta resolver problemas isolados — um designer para "deixar bonito", um gestor de tráfego para "subir campanhas".</p>
+                    <p>O Menterea não é um serviço isolado; é uma arquitetura de crescimento integrada de ponta a ponta.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Contact Footer -->
-    <section id="contato" class="cta-footer-section">
-        <div class="container cta-container">
-            <div class="cta-box">
-                <h2>Pronto para dar o próximo passo estratégico?</h2>
-                <p>Seja para estruturar o tráfego e visual da sua marca, ou desenhar um processo comercial blindado de CRM, nós temos a arquitetura correta.</p>
-                <div class="cta-buttons">
-                    <a href="https://wa.me/seu-numero" class="btn-primary-gold">Agendar Sessão Estratégica</a>
-                    <a href="mailto:contato@menterea.com.br" class="btn-outline-gold">Enviar E-mail</a>
+        <!-- Soluções: O ecossistema prático -->
+        <section id="solucoes" class="solutions">
+            <div class="container">
+                <header class="section-header">
+                    <span>O ECOSSISTEMA</span>
+                    <h2>Engenharia de Conversão</h2>
+                </header>
+                <div class="cards-grid">
+                    <article class="card">
+                        <span class="num">01</span>
+                        <h3>Atração & Posicionamento</h3>
+                        <p class="sub">Tráfego Pago + Audiovisual</p>
+                        <p>Estética refinada e tráfego agressivo para atrair atenção qualificada.</p>
+                        <a href="#" class="link">Explorar →</a>
+                    </article>
+                    <article class="card">
+                        <span class="num">02</span>
+                        <h3>Conversão & Retenção</h3>
+                        <p class="sub">CRM & Processos</p>
+                        <p>Funil de vendas automatizado para fechar contratos com máxima eficiência.</p>
+                        <a href="#" class="link">Explorar →</a>
+                    </article>
+                    <article class="card highlight">
+                        <span class="num gold">03</span>
+                        <h3 class="gold">O Ecossistema Aristos</h3>
+                        <p class="sub">Ponta a Ponta</p>
+                        <p>A sinergia perfeita entre Atração e Conversão em um único fluxo previsível.</p>
+                        <a href="#" class="btn-primary">Falar de Combo</a>
+                    </article>
                 </div>
             </div>
-            <div class="bottom-footer">
-                <p>© 2026 MENTEREA. Todos os direitos reservados. Focado em resultados de alto impacto.</p>
+        </section>
+
+        <!-- Footer: Ação final -->
+        <footer id="contato" class="cta">
+            <div class="container">
+                <h2>Pronto para o próximo passo?</h2>
+                <div class="actions">
+                    <a href="#" class="btn-primary">Agendar Sessão</a>
+                    <a href="#" class="btn-secondary">Enviar E-mail</a>
+                </div>
+                <p class="copy">© 2026 MENTEREA. Focado em resultados.</p>
             </div>
-        </div>
-    </section>
+        </footer>
+    </main>
+
+</body>
+</html>
