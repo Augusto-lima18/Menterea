@@ -2,19 +2,21 @@
    RESET & VARIABLES
    ========================================================================== */
 :root {
-    --bg-dark: #0d1117;
-    --bg-card: #161b22;
-    --bg-card-hover: #1c2128;
+    /* Tons de Azul Azul Profundo / Navy */
+    --bg-dark: #0A1128;
+    --bg-card: #101935;
+    --bg-card-hover: #172347;
     
-    --text-primary: #ffffff;
-    --text-secondary: #8b949e;
-    --text-muted: #484f58;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A0ABC0;
+    --text-muted: #52607D;
     
+    /* Tom exato de Dourado */
     --gold-primary: #CBA135;
-    --gold-hover: #e5b948;
+    --gold-hover: #E0B84C;
     --gold-dark: #967420;
     
-    --border-color: rgba(203, 161, 53, 0.25);
+    --border-color: rgba(203, 161, 53, 0.3);
     --border-card: rgba(255, 255, 255, 0.08);
 
     --font-sans: 'Montserrat', sans-serif;
@@ -83,7 +85,7 @@ a, button, .btn-primary-gold, .btn-outline-gold, .btn-secondary-link, .card-link
    ========================================================================== */
 .btn-primary-gold {
     background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-    color: #0d1117;
+    color: #0A1128;
     font-weight: 600;
     padding: 0.9rem 1.8rem;
     border-radius: 4px;
@@ -190,7 +192,7 @@ a, button, .btn-primary-gold, .btn-outline-gold, .btn-secondary-link, .card-link
     border: 1px solid var(--border-color);
     padding: 15px;
     position: relative;
-    background: rgba(22, 27, 34, 0.6);
+    background: rgba(16, 25, 53, 0.6);
 }
 
 .canvas-inner {
@@ -215,7 +217,7 @@ a, button, .btn-primary-gold, .btn-outline-gold, .btn-secondary-link, .card-link
    ========================================================================== */
 .philosophy-section {
     padding: 7rem 0;
-    background-color: #090d12;
+    background-color: #070D1F;
     border-bottom: 1px solid var(--border-card);
 }
 
@@ -340,7 +342,7 @@ a, button, .btn-primary-gold, .btn-outline-gold, .btn-secondary-link, .card-link
 /* Highlighted Card 3 */
 .highlight-card {
     border-color: var(--border-color);
-    background: linear-gradient(180deg, rgba(203, 161, 53, 0.08) 0%, var(--bg-card) 100%);
+    background: linear-gradient(180deg, rgba(203, 161, 53, 0.1) 0%, var(--bg-card) 100%);
 }
 
 .text-light {
@@ -352,7 +354,7 @@ a, button, .btn-primary-gold, .btn-outline-gold, .btn-secondary-link, .card-link
    ========================================================================== */
 .cta-footer-section {
     padding: 6rem 0 2rem 0;
-    background-color: #06090e;
+    background-color: #050814;
     border-top: 1px solid var(--border-card);
 }
 
@@ -362,7 +364,7 @@ a, button, .btn-primary-gold, .btn-outline-gold, .btn-secondary-link, .card-link
     margin: 0 auto 5rem auto;
     padding: 4rem 2rem;
     border: 1px solid var(--border-color);
-    background: rgba(22, 27, 34, 0.7);
+    background: rgba(16, 25, 53, 0.7);
 }
 
 .cta-box h2 {
