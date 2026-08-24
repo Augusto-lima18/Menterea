@@ -1,4 +1,142 @@
 /* ==========================================================================
+   RESET & VARIABLES
+   ========================================================================== */
+:root {
+    /* Tons de Azul Profundo / Navy */
+    --bg-dark: #0A1128;
+    --bg-card: #101935;
+    --bg-card-hover: #172347;
+    
+    --text-primary: #FFFFFF;
+    --text-secondary: #A0ABC0;
+    --text-muted: #52607D;
+    
+    /* Tom exato de Dourado */
+    --gold-primary: #CBA135;
+    --gold-hover: #E0B84C;
+    --gold-dark: #967420;
+    
+    --border-color: rgba(203, 161, 53, 0.3);
+    --border-card: rgba(255, 255, 255, 0.08);
+
+    --font-sans: 'Montserrat', sans-serif;
+    --font-serif: 'Poltawski Nowy', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   UTILITIES & TYPOGRAPHY
+   ========================================================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.gold-text {
+    color: var(--gold-primary);
+}
+
+.italic {
+    font-style: italic;
+    font-family: var(--font-serif);
+}
+
+.serif-text {
+    font-family: var(--font-serif);
+}
+
+.sub-title {
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold-primary);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+/* Global button styles without text-decoration */
+a, button, .btn-primary-gold, .btn-outline-gold, .btn-secondary-link, .card-link {
+    text-decoration: none !important;
+}
+
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+.btn-primary-gold {
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+    color: #0A1128;
+    font-weight: 600;
+    padding: 0.9rem 1.8rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 1px solid var(--gold-primary);
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-primary-gold:hover {
+    background: var(--gold-hover);
+    border-color: var(--gold-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(203, 161, 53, 0.3);
+}
+
+.btn-outline-gold {
+    background: transparent;
+    color: var(--gold-primary);
+    font-weight: 600;
+    padding: 0.9rem 1.8rem;
+    border-radius: 4px;
+    border: 1px solid var(--gold-primary);
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-outline-gold:hover {
+    background: rgba(203, 161, 53, 0.1);
+    color: var(--gold-hover);
+    border-color: var(--gold-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary-link {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.9rem 1rem;
+    display: inline-block;
+}
+
+.btn-secondary-link:hover {
+    color: var(--text-primary);
+}
+
+/* ==========================================================================
    HERO SECTION
    ========================================================================== */
 .hero-section {
@@ -94,4 +232,212 @@
 
 .hero-profile-img:hover {
     transform: translate(3px, -3px);
+}
+
+/* ==========================================================================
+   PHILOSOPHY SECTION
+   ========================================================================== */
+.philosophy-section {
+    padding: 7rem 0;
+    background-color: #070D1F;
+    border-bottom: 1px solid var(--border-card);
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.philosophy-quote blockquote {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.quote-author {
+    color: var(--gold-primary);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.philosophy-text h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.philosophy-text p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+/* ==========================================================================
+   SOLUTIONS SECTION
+   ========================================================================== */
+.solutions-section {
+    padding: 7rem 0;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem auto;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.section-desc {
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.solution-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-card);
+    padding: 2.5rem 2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.solution-card:hover {
+    background-color: var(--bg-card-hover);
+    border-color: var(--border-color);
+    transform: translateY(-5px);
+}
+
+.card-num {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.solution-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.card-sub {
+    font-size: 0.85rem;
+    color: var(--gold-primary);
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-body {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.card-link {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.card-link:hover {
+    color: var(--gold-primary);
+}
+
+/* Highlighted Card 3 */
+.highlight-card {
+    border-color: var(--border-color);
+    background: linear-gradient(180deg, rgba(203, 161, 53, 0.1) 0%, var(--bg-card) 100%);
+}
+
+.text-light {
+    color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   CTA FOOTER
+   ========================================================================== */
+.cta-footer-section {
+    padding: 6rem 0 2rem 0;
+    background-color: #050814;
+    border-top: 1px solid var(--border-card);
+}
+
+.cta-box {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 5rem auto;
+    padding: 4rem 2rem;
+    border: 1px solid var(--border-color);
+    background: rgba(16, 25, 53, 0.7);
+}
+
+.cta-box h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.cta-box p {
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.bottom-footer {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 2rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MOBILE & TABLETS)
+   ========================================================================== */
+@media (max-width: 992px) {
+    .hero-grid, .philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .canvas-frame {
+        max-width: 100%;
+    }
+
+    .hero-profile-img {
+        height: 380px;
+    }
 }
