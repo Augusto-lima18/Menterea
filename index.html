@@ -30,7 +30,7 @@
                 <p class="hero-desc">Transformamos sua presença digital e física em uma estrutura previsível de aquisição de clientes. Menos achismo, mais método e dados.</p>
                 
                 <div class="hero-actions">
-                    <a href="#" class="btn-primary-gold" onclick="openWhatsApp(event)">Conhecer Soluções</a>
+                    <a href="#" class="btn-primary-gold" onclick="openWhatsApp(event, 'hero')">Conhecer Soluções</a>
                     <a href="#filosofia" class="btn-secondary-link">Nossa Filosofia &rarr;</a>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                     <h3>Gestão de Tráfego Pago</h3>
                     <span class="card-sub">Meta Ads & Google Ads</span>
                     <p class="card-body">Campanhas altamente otimizadas para atrair clientes prontos para comprar, maximizando o retorno sobre o investimento em anúncios (ROAS).</p>
-                    <a href="#" class="card-link" onclick="openWhatsApp(event)">Saber mais &rarr;</a>
+                    <a href="#" class="card-link" onclick="openWhatsApp(event, 'trafego')">Saber mais &rarr;</a>
                 </div>
                 
                 <!-- Card 2 -->
@@ -89,7 +89,7 @@
                     <h3>Posicionamento no Maps</h3>
                     <span class="card-sub">SEO Local & Presença Física</span>
                     <p class="card-body">Ajuste de pino no mapa, produção visual estratégica de fotos e otimização da sua ficha no Google para dominar as buscas da sua região.</p>
-                    <a href="#" class="card-link" onclick="openWhatsApp(event)">Saber mais &rarr;</a>
+                    <a href="#" class="card-link" onclick="openWhatsApp(event, 'maps')">Saber mais &rarr;</a>
                 </div>
                 
                 <!-- Card 3 -->
@@ -98,7 +98,7 @@
                     <h3>Sites & Estruturas de CRM</h3>
                     <span class="card-sub">Vibe Coding & Integração</span>
                     <p class="card-body">Desenvolvimento de páginas ultra rápidas voltadas para conversão, integradas com fluxos de automação de CRM para acompanhamento de leads.</p>
-                    <a href="#" class="card-link gold-text" onclick="openWhatsApp(event)">Saber mais &rarr;</a>
+                    <a href="#" class="card-link gold-text" onclick="openWhatsApp(event, 'crm')">Saber mais &rarr;</a>
                 </div>
             </div>
         </div>
@@ -114,8 +114,8 @@
                 <p>Agende um diagnóstico estratégico do seu posicionamento e descubra as melhores oportunidades de atração de clientes.</p>
                 
                 <div class="cta-buttons">
-                    <a href="#" class="btn-primary-gold" onclick="openWhatsApp(event)">Iniciar Conversa no WhatsApp</a>
-                    <a href="#" class="btn-outline-gold" onclick="openWhatsApp(event)">Solicitar Diagnóstico</a>
+                    <a href="#" class="btn-primary-gold" onclick="openWhatsApp(event, 'cta_chat')">Iniciar Conversa no WhatsApp</a>
+                    <a href="#" class="btn-outline-gold" onclick="openWhatsApp(event, 'cta_diagnostico')">Solicitar Diagnóstico</a>
                 </div>
             </div>
             
@@ -126,24 +126,35 @@
     </footer>
 
     <!-- ==========================================================================
-       SCRIPT SEGURO PARA WHATSAPP (Anti-Spam & Obfucação)
+       SCRIPT SEGURO PARA WHATSAPP (Mensagens Dinâmicas por Origem)
        ========================================================================== -->
     <script>
-        function openWhatsApp(event) {
-            // Impede a navegação padrão de link vazio
+        function openWhatsApp(event, source) {
             event.preventDefault();
             
-            // Fragmentação do número para impedir varredura por robôs (scraping)
             const country = "55";
             const ddd = "13";
             const number = "997398225";
             
-            // Mensagem padrão codificada com segurança
-            const message = encodeURIComponent("Olá, Otávio! Vi o site da Menterea e gostaria de agendar uma conversa sobre estratégia e tráfego.");
+            // Dicionário de mensagens pré-definidas por botão
+            const messages = {
+                'hero': "Olá, Otávio! Vi o site da Menterea e gostaria de entender como funciona o trabalho de estratégia e tráfego pago.",
+                'trafego': "Olá, Otávio! Tenho interesse na Gestão de Tráfego Pago (Meta e Google Ads) para o meu negócio. Como podemos conversar?",
+                'maps': "Olá, Otávio! Quero otimizar a presença da minha empresa no Google Maps e melhorar nosso posicionamento local. Como funciona?",
+                'crm': "Olá, Otávio! Tenho interesse na criação de um site otimizado e estruturação de CRM para a minha empresa.",
+                'cta_chat': "Olá, Otávio! Gostaria de agendar uma conversa para estruturar o crescimento da minha empresa.",
+                'cta_diagnostico': "Olá, Otávio! Quero solicitar um diagnóstico gratuito para entender onde minha empresa pode melhorar na atração de clientes."
+            };
+
+            // Mensagem padrão de fallback caso a origem não exista
+            const defaultMessage = "Olá, Otávio! Vi o site da Menterea e gostaria de agendar uma conversa sobre estratégia.";
             
-            const whatsappUrl = `https://wa.me/${country}${ddd}${number}?text=${message}`;
+            const textToUse = messages[source] || defaultMessage;
+            const encodedText = encodeURIComponent(textToUse);
             
-            // Abertura segura em nova aba, protegendo contra hijacking de aba (noopener/noreferrer)
+            const whatsappUrl = `https://wa.me/${country}${ddd}${number}?text=${encodedText}`;
+            
+            // Abertura segura em nova aba
             const secureWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
             if (secureWindow) {
                 secureWindow.opener = null;
