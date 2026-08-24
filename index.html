@@ -136,7 +136,6 @@
             const ddd = "13";
             const number = "997398225";
             
-            // Dicionário de mensagens pré-definidas por botão
             const messages = {
                 'hero': "Olá, Otávio! Vi o site da Menterea e gostaria de entender como funciona o trabalho de estratégia e tráfego pago.",
                 'trafego': "Olá, Otávio! Tenho interesse na Gestão de Tráfego Pago (Meta e Google Ads) para o meu negócio. Como podemos conversar?",
@@ -146,7 +145,6 @@
                 'cta_diagnostico': "Olá, Otávio! Quero solicitar um diagnóstico gratuito para entender onde minha empresa pode melhorar na atração de clientes."
             };
 
-            // Mensagem padrão de fallback caso a origem não exista
             const defaultMessage = "Olá, Otávio! Vi o site da Menterea e gostaria de agendar uma conversa sobre estratégia.";
             
             const textToUse = messages[source] || defaultMessage;
@@ -154,7 +152,6 @@
             
             const whatsappUrl = `https://wa.me/${country}${ddd}${number}?text=${encodedText}`;
             
-            // Abertura segura em nova aba
             const secureWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
             if (secureWindow) {
                 secureWindow.opener = null;
