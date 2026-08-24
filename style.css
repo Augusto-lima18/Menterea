@@ -2,7 +2,7 @@
    RESET & VARIABLES
    ========================================================================== */
 :root {
-    /* Tons de Azul Azul Profundo / Navy */
+    /* Tons de Azul Profundo / Navy */
     --bg-dark: #0A1128;
     --bg-card: #101935;
     --bg-card-hover: #172347;
@@ -185,31 +185,30 @@ a, button, .btn-primary-gold, .btn-outline-gold, .btn-secondary-link, .card-link
     gap: 1.5rem;
 }
 
-/* Hero Canvas Frame Mock */
+/* Moldura e Estilização da Foto do Fundador na Hero */
 .canvas-frame {
     width: 100%;
-    height: 380px;
+    height: 480px;
     border: 1px solid var(--border-color);
-    padding: 15px;
+    padding: 8px;
     position: relative;
     background: rgba(16, 25, 53, 0.6);
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.canvas-inner {
+.hero-profile-img {
     width: 100%;
     height: 100%;
-    border: 1px dashed rgba(203, 161, 53, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 2px;
+    filter: contrast(105%) brightness(95%);
+    transition: transform 0.5s ease;
 }
 
-.canvas-logo {
-    font-family: var(--font-serif);
-    font-size: 6rem;
-    color: var(--gold-primary);
-    opacity: 0.25;
+.hero-profile-img:hover {
+    transform: scale(1.02);
 }
 
 /* ==========================================================================
@@ -412,6 +411,6 @@ a, button, .btn-primary-gold, .btn-outline-gold, .btn-secondary-link, .card-link
     }
 
     .canvas-frame {
-        height: 250px;
+        height: 350px;
     }
 }
