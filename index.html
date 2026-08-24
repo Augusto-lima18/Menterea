@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Proteções de cabeçalho contra inclusão não autorizada e clickjacking -->
+    <!-- Proteção básica de cabeçalho contra inclusão não autorizada -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
     
@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poltawski+Nowy:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
-    <!-- CSS Principal -->
+    <!-- Archivo CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,12 +25,12 @@
     <header class="hero-section">
         <div class="container hero-grid">
             <div class="hero-content">
-                <span class="tagline">MENTEREA • INTELLIGENCE & GROWTH</span>
+                <span class="tagline">MENTEREA • INTELIGENCE & GROWTH</span>
                 <h1>Engenharia de Vendas, <span class="italic gold-text">Tráfego Pago</span> & Posicionamento Estratégico.</h1>
                 <p class="hero-desc">Transformamos sua presença digital e física em uma estrutura previsível de aquisição de clientes. Menos achismo, mais método e dados.</p>
                 
                 <div class="hero-actions">
-                    <a href="#" class="btn-primary-gold" onclick="openWhatsApp(event, 'hero')" rel="noopener noreferrer">Conhecer Soluções</a>
+                    <a href="#" class="btn-primary-gold" onclick="openWhatsApp(event)">Conhecer Soluções</a>
                     <a href="#filosofia" class="btn-secondary-link">Nossa Filosofia &rarr;</a>
                 </div>
             </div>
@@ -56,7 +56,7 @@
             <div class="philosophy-text">
                 <span class="sub-title">FUNDAMENTOS</span>
                 <h2>Não vendemos apenas anúncios. Construímos ecossistemas digitais.</h2>
-                <p>O tráfego pago sem um alinhamento estratégico e um posicionamento no Google Maps é apenas desperdício de orçamento. Nossa abordagem unifica a atração de leads com a eficiência do fechamento comercial.</p>
+                <p>O tráfego pago sem um CRM alinhado e um posicionamento no Google Maps é apenas desperdício de orçamento. Nossa abordagem unifica a atração de leads com a eficiência do fechamento comercial.</p>
                 <p>Ajustamos cada pino no mapa, refinamos a experiência do site e direcionamos tráfego qualificado para onde sua empresa realmente converte.</p>
             </div>
         </div>
@@ -80,7 +80,7 @@
                     <h3>Gestão de Tráfego Pago</h3>
                     <span class="card-sub">Meta Ads & Google Ads</span>
                     <p class="card-body">Campanhas altamente otimizadas para atrair clientes prontos para comprar, maximizando o retorno sobre o investimento em anúncios (ROAS).</p>
-                    <a href="#" class="card-link" onclick="openWhatsApp(event, 'trafego')" rel="noopener noreferrer">Saber mais &rarr;</a>
+                    <a href="#" class="card-link" onclick="openWhatsApp(event)">Saber mais &rarr;</a>
                 </div>
                 
                 <!-- Card 2 -->
@@ -89,16 +89,16 @@
                     <h3>Posicionamento no Maps</h3>
                     <span class="card-sub">SEO Local & Presença Física</span>
                     <p class="card-body">Ajuste de pino no mapa, produção visual estratégica de fotos e otimização da sua ficha no Google para dominar as buscas da sua região.</p>
-                    <a href="#" class="card-link" onclick="openWhatsApp(event, 'maps')" rel="noopener noreferrer">Saber mais &rarr;</a>
+                    <a href="#" class="card-link" onclick="openWhatsApp(event)">Saber mais &rarr;</a>
                 </div>
                 
                 <!-- Card 3 -->
                 <div class="solution-card highlight-card">
                     <span class="card-num">03</span>
-                    <h3>Criação de Sites & Posição Digital</h3>
-                    <span class="card-sub">Vibe Coding & Alta Conversão</span>
-                    <p class="card-body">Desenvolvimento de páginas ultra rápidas voltadas para conversão e otimizadas para capturar o máximo de oportunidades do seu mercado.</p>
-                    <a href="#" class="card-link gold-text" onclick="openWhatsApp(event, 'sites')" rel="noopener noreferrer">Saber mais &rarr;</a>
+                    <h3>Sites & Estruturas de CRM</h3>
+                    <span class="card-sub">Vibe Coding & Integração</span>
+                    <p class="card-body">Desenvolvimento de páginas ultra rápidas voltadas para conversão, integradas com fluxos de automação de CRM para acompanhamento de leads.</p>
+                    <a href="#" class="card-link gold-text" onclick="openWhatsApp(event)">Saber mais &rarr;</a>
                 </div>
             </div>
         </div>
@@ -114,8 +114,8 @@
                 <p>Agende um diagnóstico estratégico do seu posicionamento e descubra as melhores oportunidades de atração de clientes.</p>
                 
                 <div class="cta-buttons">
-                    <a href="#" class="btn-primary-gold" onclick="openWhatsApp(event, 'cta_chat')" rel="noopener noreferrer">Iniciar Conversa no WhatsApp</a>
-                    <a href="#" class="btn-outline-gold" onclick="openWhatsApp(event, 'cta_diagnostico')" rel="noopener noreferrer">Solicitar Diagnóstico</a>
+                    <a href="#" class="btn-primary-gold" onclick="openWhatsApp(event)">Iniciar Conversa no WhatsApp</a>
+                    <a href="#" class="btn-outline-gold" onclick="openWhatsApp(event)">Solicitar Diagnóstico</a>
                 </div>
             </div>
             
@@ -126,35 +126,24 @@
     </footer>
 
     <!-- ==========================================================================
-       SCRIPT SEGURO PARA WHATSAPP (API Dinâmica & Proteção Anti-Spam)
+       SCRIPT SEGURO PARA WHATSAPP (Anti-Spam & Obfucação)
        ========================================================================== -->
     <script>
-        function openWhatsApp(event, source) {
+        function openWhatsApp(event) {
+            // Impede a navegação padrão de link vazio
             event.preventDefault();
             
-            // Fragmentação do número de telefone (13) 99739-8225 contra scraping
+            // Fragmentação do número para impedir varredura por robôs (scraping)
             const country = "55";
             const ddd = "13";
             const number = "997398225";
             
-            // Mapeamento de mensagens da API por origem do botão
-            const messages = {
-                'hero': "Olá, Otávio! Vi o site da Menterea e gostaria de entender como funciona o trabalho de estratégia e tráfego pago.",
-                'trafego': "Olá, Otávio! Tenho interesse na Gestão de Tráfego Pago (Meta e Google Ads) para o meu negócio.",
-                'maps': "Olá, Otávio! Quero otimizar a presença da minha empresa no Google Maps e melhorar o posicionamento local.",
-                'sites': "Olá, Otávio! Tenho interesse no desenvolvimento de um site otimizado para a minha empresa.",
-                'cta_chat': "Olá, Otávio! Gostaria de agendar uma conversa para estruturar o crescimento da minha empresa.",
-                'cta_diagnostico': "Olá, Otávio! Quero solicitar um diagnóstico gratuito para entender onde minha empresa pode melhorar na atração de clientes."
-            };
-
-            const defaultMessage = "Olá, Otávio! Vi o site da Menterea e gostaria de agendar uma conversa sobre estratégia.";
+            // Mensagem padrão codificada com segurança
+            const message = encodeURIComponent("Olá, Otávio! Vi o site da Menterea e gostaria de agendar uma conversa sobre estratégia e tráfego.");
             
-            const textToUse = messages[source] || defaultMessage;
-            const encodedText = encodeURIComponent(textToUse);
+            const whatsappUrl = `https://wa.me/${country}${ddd}${number}?text=${message}`;
             
-            const whatsappUrl = `https://wa.me/${country}${ddd}${number}?text=${encodedText}`;
-            
-            // Abertura em nova aba sem expor o 'window.opener' (Prevenção de Tabnabbing/Hijacking)
+            // Abertura segura em nova aba, protegendo contra hijacking de aba (noopener/noreferrer)
             const secureWindow = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
             if (secureWindow) {
                 secureWindow.opener = null;
